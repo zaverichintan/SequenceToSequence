@@ -1,0 +1,51 @@
+# SequenceToSequence
+This repository has implementation of LSTM and Markov model for sequence prediction.
+Approach:
+This problem of predicting sequence of events can be solved by two methods -
+
+    - Encoder-Decoder LSTM Long Short-Term Memory (LSTM) :         
+        Recurrent neural networks as they can remember observations over long sequence intervals. A recurrent network whose inputs are not fixed but rather constitute an input sequence can be used to transform an input sequence into an output sequence while taking into account contextual information in a flexible way. Which can be used to predict the sequence of events in given time, based on the sequence of events in the past.
+    - Markov Chain :
+        Markov chain is based on a principle of “memorylessness”. In other words the next state of the process only depends on the previous state and not the sequence of states. This simple assumption makes the calculation of conditional probability easy and enables this algorithm to be applied in number of scenarios. 
+
+I started with markov chain implementation with markovchain package in R, but in markov chain the output only depends on previous state (in case of first order) and on previous n stages ( in case of n order), so I implemented Encoder-Decoder LSTM in python. LSTM works with high accuracy as the entire sequence of events is taken into consideration for predicting next sequence.
+
+
+Tools Used:
+    Python with Keras, Numpy, Pandas.
+    
+    R with markovchain.
+
+References: 
+
+http://machinelearningmastery.com/how-to-use-an-encoder-decoder-lstm-to-echo-sequences-of-random-integers/
+https://github.com/HackerEarth-Challenges/ZS-Challenge-2017/blob/master/Python_Starter.ipynb
+
+RNN - training:
+
+Epoch 1/500
+7s - loss: 8.7751 - acc: 0.0049
+Epoch 2/500
+7s - loss: 8.7663 - acc: 0.0750
+Epoch 3/500
+7s - loss: 8.7364 - acc: 0.0484
+Epoch 4/500
+7s - loss: 8.5207 - acc: 0.0380
+Epoch 5/500
+7s - loss: 7.4639 - acc: 0.0380
+Epoch 6/500
+8s - loss: 6.4654 - acc: 0.0380
+Epoch 7/500
+7s - loss: 5.4825 - acc: 0.0380
+Epoch 8/500
+7s - loss: 4.7398 - acc: 0.0380
+Epoch 9/500
+7s - loss: 4.3868 - acc: 0.0543
+Epoch 10/500
+9s - loss: 4.2224 - acc: 0.0543
+Epoch 11/500
+8s - loss: 4.1414 - acc: 0.0543
+Epoch 12/500
+7s - loss: 4.0994 - acc: 0.0543
+Epoch 13/500
+7s - loss: 4.0729 - acc: 0.0543
